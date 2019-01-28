@@ -94,13 +94,8 @@ public class Loader
         System.out.println(black.getStatus());
         System.out.println("Количество кошек: " + Cat.getCount());
         System.out.println("=============================================");
+        //**************************************************************************
 
-
-        //***********   Создаём новую кошку со случайной массой в диапазоне [100,200] грамм    *********************
-        Cat white = Cat.getNewRandomCat();
-        System.out.println(white.getWeight());
-        System.out.println("Количество кошек: " + Cat.getCount());
-        System.out.println("=============================================");
 
         //*****************      Клонируем кошку    **************************
         Cat blue = new Cat();
@@ -108,7 +103,18 @@ public class Loader
         blue.feed(100.0);
         System.out.println(blue.getWeight());
         System.out.println(dark.getWeight());
-        //**************************************************************************
 
+        //***********   Создаём новую кошку со случайной массой в диапазоне (100,200) грамм    *********************
+        Cat white = getNewRandomCat();
+        System.out.println(white.getWeight());
+        System.out.println("Количество кошек: " + Cat.getCount());
+        System.out.println("=============================================");
+    }
+
+    public static Cat getNewRandomCat()       //Метод создания новой кошки со случайной массой
+    {
+        Double randomWeight = 100 + 100*Math.random();
+        Cat cat = new Cat(randomWeight);
+        return cat;
     }
 }

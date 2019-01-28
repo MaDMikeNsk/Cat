@@ -103,12 +103,12 @@ public class Cat
         return difference;
     }
 
-    public static Cat getNewRandomCat()       //Метод создания новой кошки со случайной массой
-    {
-        Double randomWeight = 100 + 100*Math.random();
-        Cat cat = new Cat(randomWeight);
-        return cat;
-    }
+//    public static Cat getNewRandomCat()       //Метод создания новой кошки со случайной массой
+//    {
+//        Double randomWeight = 100 + 100*Math.random();
+//        Cat cat = new Cat(randomWeight);
+//        return cat;
+//    }
 
     public static Cat cloneCat (Cat cat)      //Метод создания 'глубокой' копии кошки
     {
