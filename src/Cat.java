@@ -4,12 +4,9 @@ public class Cat
     private Double originWeight;
     private Double weight;
     private static int count = 0;
-
     private Double minWeight;
     private Double maxWeight;
-
     private Boolean isDead;
-    private Double fixedWeight;
 
 
 
@@ -36,7 +33,6 @@ public class Cat
     public void meow()
     {
         weight = weight - 1;
-//        System.out.println("Meow");
     }
 
     public void feed(Double amount)
@@ -102,13 +98,6 @@ public class Cat
         Double difference = Math.abs (cat1.getWeight() - cat2.getWeight());
         return difference;
     }
-
-//    public static Cat getNewRandomCat()       //Метод создания новой кошки со случайной массой
-//    {
-//        Double randomWeight = 100 + 100*Math.random();
-//        Cat cat = new Cat(randomWeight);
-//        return cat;
-//    }
 
     public static Cat cloneCat (Cat cat)      //Метод создания 'глубокой' копии кошки
     {

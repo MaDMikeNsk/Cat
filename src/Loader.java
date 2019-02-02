@@ -1,4 +1,3 @@
-import java.net.Socket;
 
 public class Loader
 {
@@ -71,10 +70,6 @@ public class Loader
         System.out.println("=============================================");
 
         System.out.println("Количество кошек: " + Cat.getCount());
-//
-//        System.out.println("Вес Боба: " + bob.getWeight());
-//        System.out.println("Вес Дика: "+ dik.getWeight());
-//        System.out.println(Cat.getWeightDifference(bob, dik));
 
         System.out.println("Мурзик " + murzik.getStatus());
         System.out.println("Васька " + vaska.getStatus());
@@ -111,7 +106,7 @@ public class Loader
         System.out.println("=============================================");
     }
 
-    public static Cat getNewRandomCat()       //Метод создания новой кошки со случайной массой
+    private static Cat getNewRandomCat()       //Метод создания новой кошки со случайной массой
     {
         Double randomWeight = 100 + 100*Math.random();
         Cat cat = new Cat(randomWeight);
